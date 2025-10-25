@@ -1,4 +1,4 @@
-#Privolio: The Secure Read-Only Code Sharing Platform
+## PRIVOLIO: The Secure Read-Only Code Sharing Platform
 
 **Privolio** is a modern web platform that allows developers to share private code repositories in a read-only, controlled way making it ideal for portfolio sharing, recruiter access, and client demos. Privolio allows users to share temporary, secure, non-downloadable previews of their code all in a clean, web viewer.
 
