@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Privolio Link Test</title>
+</head>
+<body>
+  <h1>Click to Create Share Link</h1>
+  <button onclick="createLink()">Create Share Link</button>
+
+  <script>
+    function createLink() {
+      fetch('http://localhost:3000/api/links', {
+        method: 'POST',
+        credentials: 'include',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          full_name: 'theworldofraheem/comp2005-Final-project-',
+          expiresIn: 3600,
+          maxViews: 5
+        })
+      })
+      .then(res => res.json())
+      .then(data => {
+        console.log('✅ Success:', data);
+        alert('Share Link:\n' + data.shareLink);
+      })
+      .catch(err => {
+        console.error('❌ Error:', err);
+        alert('Error occurred. Check console.');
+      });
+    }
+  </script>
+</body>
+</html>
